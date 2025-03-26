@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MDP Ramificado - Simulador de Estados do Carro</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MDP Ramificado - Simulador de Estados do Carro</h1>
+            <p class="subtitle">Processo de Decisão de Markov com visualização de probabilidades</p>
+        </header>
+        
+        <div class="simulation-panel">
+            <div class="current-state-card">
+                <div class="card-header">
+                    <h2>ESTADO ATUAL</h2>
+                </div>
+                <div class="card-body">
+                    <div class="state-id" id="current-state-id">s0</div>
+                    <div class="state-name" id="current-state-name">Carro desligado</div>
+                    <div class="state-probability" id="current-state-prob"></div>
+                </div>
+            </div>
+            
+            <div class="possible-actions-card">
+                <div class="card-header">
+                    <h2>AÇÕES POSSÍVEIS</h2>
+                </div>
+                <div class="card-body" id="actions-container">
+                    <!-- Ações serão inseridas aqui pelo JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div class="probability-calculation-card">
+            <div class="card-header">
+                <h2>CÁLCULO DE PROBABILIDADES</h2>
+            </div>
+            <div class="card-body" id="probability-calculation">
+                <p>Clique em uma ação para ver o cálculo das probabilidades</p>
+            </div>
+        </div>
+        
+        <div class="history-card">
+            <div class="card-header">
+                <h2>HISTÓRICO DE TRANSIÇÕES</h2>
+            </div>
+            <div class="card-body">
+                <div id="history-list"></div>
+            </div>
+        </div>
+        
+        <div class="states-tree-card">
+            <div class="card-header">
+                <h2>ÁRVORE COMPLETA DE ESTADOS</h2>
+            </div>
+            <div class="card-body">
+                <div id="states-visualization"></div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button onclick="resetSimulation()" class="reset-btn">↻ Reiniciar Simulação</button>
+            <button onclick="showAllProbabilities()" class="prob-btn">🧮 Mostrar Todas as Probabilidades</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
