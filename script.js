@@ -1,4 +1,3 @@
-// Definindo todos os estados conforme o desafio
 const estados = {
     's0': {
         nome: 'Carro desligado',
